@@ -1,0 +1,293 @@
+
+:root {
+    --azul: #172b4d;
+    --azul-claro: #29466e;
+    --dorado: #d5a64b;
+    --crema: #f7f3eb;
+    --blanco: #ffffff;
+    --texto: #333b49;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--crema);
+    color: var(--texto);
+    line-height: 1.7;
+}
+
+header {
+    background: var(--azul);
+    color: white;
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.logo {
+    font-size: 1.05rem;
+    font-weight: bold;
+}
+
+.logo span {
+    display: block;
+    color: var(--dorado);
+    font-size: 0.85rem;
+    font-weight: normal;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 17px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.93rem;
+}
+
+nav a:hover,
+nav a.activo {
+    color: var(--dorado);
+}
+
+.hero {
+    min-height: 500px;
+    padding: 75px 8%;
+    display: flex;
+    align-items: center;
+    color: white;
+    background:
+        linear-gradient(90deg,
+        rgba(15, 29, 51, .94),
+        rgba(15, 29, 51, .58)),
+        url("https://images.unsplash.com/photo-1461360370896-922624d12aa1?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+}
+
+.hero-contenido {
+    max-width: 780px;
+}
+
+.etiqueta {
+    color: var(--dorado);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.12;
+    margin: 20px 0;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    max-width: 650px;
+    margin-bottom: 25px;
+}
+
+.boton {
+    display: inline-block;
+    background: var(--dorado);
+    color: var(--azul);
+    padding: 12px 23px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5px 5px 5px 0;
+    transition: .3s;
+}
+
+.boton:hover {
+    background: white;
+    transform: translateY(-2px);
+}
+
+.boton-borde {
+    border: 1px solid white;
+    color: white;
+    padding: 11px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px;
+}
+
+section {
+    padding: 65px 8%;
+}
+
+.titulo {
+    text-align: center;
+    color: var(--azul);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 15px;
+}
+
+.subtitulo {
+    max-width: 780px;
+    text-align: center;
+    margin: 0 auto 35px;
+}
+
+.contenido {
+    max-width: 1050px;
+    margin: auto;
+}
+
+.dos-columnas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+}
+
+.imagen {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.tarjeta {
+    background: white;
+    padding: 27px;
+    border-radius: 10px;
+    border-bottom: 4px solid var(--dorado);
+    box-shadow: 0 5px 18px #0000000c;
+}
+
+.tarjeta h3 {
+    color: var(--azul);
+    margin-bottom: 10px;
+}
+
+.icono {
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+}
+
+.lista {
+    max-width: 850px;
+    margin: auto;
+    list-style: none;
+}
+
+.lista li {
+    background: white;
+    margin: 12px 0;
+    padding: 15px 20px;
+    border-radius: 7px;
+}
+
+.lista li::before {
+    content: "✓ ";
+    color: #a87920;
+    font-weight: bold;
+}
+
+.destacado {
+    background: var(--azul);
+    color: white;
+    text-align: center;
+}
+
+.destacado h2 {
+    color: white;
+}
+
+.destacado p {
+    max-width: 750px;
+    margin: 0 auto 20px;
+}
+
+.formulario {
+    max-width: 650px;
+    margin: auto;
+    background: white;
+    padding: 28px;
+    border-radius: 12px;
+}
+
+.formulario label {
+    display: block;
+    margin: 12px 0 5px;
+    font-weight: bold;
+}
+
+.formulario input,
+.formulario textarea,
+.formulario select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font: inherit;
+}
+
+.formulario button {
+    border: none;
+    cursor: pointer;
+    font: inherit;
+}
+
+.aviso {
+    background: #fff3d7;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+footer {
+    background: #101d33;
+    color: white;
+    padding: 30px 7%;
+    text-align: center;
+}
+
+footer .detalle {
+    color: var(--dorado);
+}
+
+@media (max-width: 800px) {
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .dos-columnas,
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 45px 6%;
+    }
+
+    .hero {
+        padding: 55px 6%;
+    }
+}
